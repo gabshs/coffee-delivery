@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import HeroBackground from '../../assets/background-hero.png'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -45,4 +46,24 @@ export const BadgeLocation = styled.div`
 `
 
 export const HeroContainer = styled.section`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10rem 12rem;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url(${HeroBackground});
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.75;
+  }
 `
